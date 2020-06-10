@@ -3,18 +3,15 @@ from scipy.optimize import least_squares
 from src import constants
 
 
-# find a more descriptive name for this
 def fun_circa_single(x, t, y):
     return x[0] + x[1] * np.cos(t - x[2]) - y
 
 
-# find more descriptive names for some of the variables in this function
 def param_standard_errors(optimised_result, y):
     ssr = np.nansum(optimised_result.fun ** 2)
     dof = y.size - 2
     mse = ssr / dof
     rmse = np.sqrt(mse)
-    # get parameter standard error estimates
     neg_hess = np.dot(optimised_result.jac.T, optimised_result.jac)
     inv_neg_hess = np.linalg.inv(neg_hess)
     res_lsq_params_se = np.sqrt(np.diagonal(inv_neg_hess)) * rmse
@@ -45,7 +42,6 @@ def circa_single(t0, y0, loss=constants.LOSS, f_scale=constants.F_SCALE, max_ite
     return result_least_squares
 
 
-# find a more descriptive name for this -- what are we comparing? compare_etc
 def fun_circacompare(x, t, y, g):
     return (x[0] + x[1] * g) + (x[2] + x[3] * g) * np.cos(t - (x[4] + x[5] * g)) - y
 
