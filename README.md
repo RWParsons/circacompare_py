@@ -1,6 +1,6 @@
 # circacompare
 This is a Python package that allows for the statistical analyses and comparison of two circadian rhythms.
-The Python implementation which you're looking at is an replication of this [R-package](https://github.com/RWParsons/circacompare). However, it comes with the added functionality of having control over the loss function used (opposed to least squares, which is used in the R-package).
+The Python implementation which you're looking at is an implementation of this [R-package](https://github.com/RWParsons/circacompare). However, it comes with the added functionality of having control over the loss function used (opposed to least squares, which is used in the R-package). 
 
 This work is published [here](https://academic.oup.com/bioinformatics/article-abstract/doi/10.1093/bioinformatics/btz730/5582266) and can be cited as: 
 
