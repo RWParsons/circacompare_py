@@ -1,6 +1,7 @@
 import numpy as np
 from scipy.optimize import least_squares
-import constants
+from src import constants
+
 
 # find a more descriptive name for this
 def fun_circa_single(x, t, y):

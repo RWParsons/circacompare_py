@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from compare import circa_single, circacompare
-import constants
+from src.compare import circa_single, circacompare
+from src import constants
 
 
 def predict_y(x, t):
