@@ -1,0 +1,3 @@
+LOSS = 'linear'
+F_SCALE = 1.0
+MAX_ITERATIONS = 500
